@@ -15,7 +15,7 @@ module.exports = {
               options: {
                 javascriptEnabled: true,
                 lessOptions: {
-                  strictMath: true,
+                  strictMath: false,
                 },
               },
             },
