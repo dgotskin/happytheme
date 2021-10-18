@@ -16,8 +16,8 @@
   font-weight: 900;
   src: url(https://fonts.gstatic.com/s/raleway/v22/1Ptxg8zYS_SKggPN4iEgvnHyvveLxVtzpYCP.ttf) format('truetype');
 }
-div.App {
-  width: 1152px;
+.App {
+  max-width: 1152px;
   margin: 64px auto;
 }
 .colorplate {

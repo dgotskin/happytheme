@@ -1,0 +1,189 @@
+
+// The prefix to use on all css classes from ant.
+@theme: default;
+
+// The prefix to use on all css classes from ant.
+@ant-prefix: ant;
+
+// An override for the html selector for theme prefixes
+@html-selector: html;
+
+
+/*
+   ===================================
+   -------- PLATFORM Palette ---------
+   ===================================
+*/
+// GRAY Neutral
+@gray-0: #FFFFFF;
+@gray-1: hsl(0,0,97%);
+@gray-2: hsl(0,0,95%);
+@gray-3: hsl(0,0,90%);
+@gray-4: hsl(0,0,85%);
+@gray-5: hsl(0,0,70%);
+@gray-6: hsl(0,0,55%);
+@gray-7: hsl(0,0,45%);
+@gray-8: hsl(0,0,35%);
+@gray-9: hsl(0,0,20%);
+@gray-10: hsl(0,0,15%);
+@gray-11: hsl(0,0,10%);
+@gray-12: hsl(0,0,0%);
+
+// SMOKE
+@smoke-0: hsla(200, 20%, 95%, 1); 
+@smoke-1: hsla(200, 30%, 90%, 1); 
+@smoke-2: hsla(200, 25%, 85%, 1); 
+@smoke-3: hsla(200, 20%, 70%, 1); 
+@smoke-4: hsla(200, 15%, 48%, 1); 
+@smoke-5: hsla(200, 25%, 27%, 1); 
+@smoke-6: hsla(200, 25%, 20%, 1); 
+
+// DUST
+// Build for DARK Mode Backgrounds and bg of tips or dark blocks in LIGHT Mode
+@dust-1: hsla(200, 46%, 18%, 1);
+@dust-2: hsla(200, 43%, 15%, 1);
+@dust-3: hsla(200, 40%, 12%, 1); // Panels +1 contrast plane
+@dust-4: hsla(200, 41%, 10%, 1); // Panels 
+@dust-5: hsla(200, 41%, 8%, 1); // Background in DARK Mode 
+@dust-6: hsla(200, 48%, 6%, 1); // The evil darkness :) more darker than bg in DARK Mode. Build for more blocks contrast
+
+// SKY
+@sky-1: hsla(197, 100%, 90%, 1); 
+@sky-2: hsla(197, 100%, 85%, 1); 
+@sky-3: hsla(197, 100%, 77%, 1); 
+@sky-4: hsla(197, 95%, 68%, 1); 
+@sky-5: hsla(197, 90%, 60%, 1); 
+@sky-6: hsla(197, 100%, 45%, 1); // Transfer to Blue
+@sky-7: hsla(197, 100%, 35%, 1); 
+@sky-8: hsla(197, 100%, 25%, 1); 
+@sky-9: hsla(197, 100%, 20%, 1); 
+@sky-10: hsla(197, 100%, 12%, 1); 
+
+// BRICK wall
+@brick-5: hsla(353, 61%, 56%, 1);
+@brick-6: hsla(354, 60%, 49%, 1); // Transfer to Red
+@brick-7: hsla(354, 65%, 37%, 1);
+
+@leaf-6: hsl(148,90,35); // SBOL Button color / hsl 148 90 35 / #09A954
+
+// ======== BASE Colors ======
+
+// Color used by default to control hover and active backgrounds and for
+// alert info backgrounds.
+@primary-1: color(~`colorPalette('@{primary-color}', 1) `); // replace tint(@primary-color, 90%)
+@primary-2: color(~`colorPalette('@{primary-color}', 2) `); // replace tint(@primary-color, 80%)
+@primary-3: color(~`colorPalette('@{primary-color}', 3) `); // unused
+@primary-4: color(~`colorPalette('@{primary-color}', 4) `); // unused
+@primary-5: color(~`colorPalette('@{primary-color}', 5) `); // color used to control the text color in many active and hover states, replace tint(@primary-color, 20%)
+@primary-6: @primary-color; // color used to control the text color of active buttons, don't use, use @primary-color
+@primary-7: color(~`colorPalette('@{primary-color}', 7) `); // replace shade(@primary-color, 5%)
+@primary-8: color(~`colorPalette('@{primary-color}', 8) `); // unused
+@primary-9: color(~`colorPalette('@{primary-color}', 9) `); // unused
+@primary-10: color(~`colorPalette('@{primary-color}', 10) `); // unused
+
+// Forever!
+@white: @gray-0; // White is white
+@black: @gray-10; // Black in not black
+
+// Primary colors
+@primary-color: @sky-6;
+@info-color: @primary-color;
+@success-color: @leaf-6;
+@processing-color: @primary-color;
+@error-color: @brick-5;
+@highlight-color: @red-5;
+@warning-color: @gold-6;
+@normal-color: #d9d9d9; // ?
+
+// Text colors
+@heading-color: @smoke-6; // Titles
+@text-color: @smoke-5; // Primary
+@text-color-inverse: @smoke-0; // Primary inverse
+@text-color-secondary: @smoke-4; // Secondary
+
+@text-color-dark: fade(@white, 85%); // !!! TBD Sync with DARK mode
+@text-color-secondary-dark: fade(@white, 65%); // !!! TBD Sync with DARK mode 
+
+// Background color for `<body>`
+@body-background: @gray-1;
+// Base background color for most components
+@component-background: @white;
+// Popover background color
+@popover-background: @component-background;
+@popover-customize-border-color: @border-color-split;
+
+// ============ FONTS ==============
+
+
+@font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial,
+    'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
+    'Noto Color Emoji';
+@code-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace;
+@icon-color: inherit;
+@icon-color-hover: fade(@black, 75%);
+@text-selection-bg: @primary-color;
+
+// ======= TYPOGRAPHY ==========
+
+
+@font-variant-base: tabular-nums;
+@font-feature-settings-base: 'tnum';
+@font-size-base: 14px;
+@font-size-lg: @font-size-base + 2px;
+@font-size-sm: @font-size-base - 2px;
+@heading-1-size: ceil(@font-size-base * 2.71); // ok
+@heading-2-size: ceil(@font-size-base * 2.14); 
+@heading-3-size: ceil(@font-size-base * 1.71);
+@heading-4-size: ceil(@font-size-base * 1.42);
+@heading-5-size: ceil(@font-size-base * 1.28); // 1.14 default
+// https://github.com/ant-design/ant-design/issues/20210
+@line-height-base: 1.5; // 1.5715
+
+// ======= BORDERS Radus ========
+
+@border-radius-base: 0px;
+@border-radius-sm: @border-radius-base;
+
+// ======= PADDINGS =============
+
+// vertical paddings
+@padding-lg: 32px; // containers
+@padding-md: 24px; // small containers and buttons
+@padding-sm: 16px; // Form controls and items
+@padding-xs: 8px; // small items
+@padding-xss: 4px; // more small
+
+// height rules
+@height-base: 40px;
+@height-lg: 64px; // 40px
+@height-sm: 28px;
+
+
+// ======== GRIDS ========
+
+@grid-columns: 12;
+
+
+// ------ FORMS ------- //
+@form-item-margin-bottom: 16px;
+
+// Checkbox
+@checkbox-size: 16px;
+@checkbox-color: @blue-10;
+@checkbox-check-color: #fff;
+@checkbox-check-bg: @checkbox-check-color;
+@checkbox-border-width: @border-width-base;
+@checkbox-border-radius: @border-radius-base;
+@checkbox-group-item-margin-right: 8px;
+
+
+// ====== CARD =======
+@card-shadow: @-shadow-xl;  // something
+@card-radius: 8px;
+@card-padding-base: @padding-lg;
+@card-padding-base-sm: @padding-md;
+
+// Motion
+// ---
+@wave-animation-width: 12px; // 6px
+

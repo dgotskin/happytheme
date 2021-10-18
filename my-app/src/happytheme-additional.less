@@ -1,0 +1,33 @@
+@-shadow-s: 0px 2px 6px 0px hsla(0, 0%, 79%,  .1), 0px 1px 1px 0px hsla(0, 0%, 79%,  .3);
+@-shadow-m: 0px 4px 12px 0px hsla(0, 0%, 79%,  .2), 0px 1px 4px 0px hsla(0, 0%, 79%, .15);
+@-shadow-l: 0px 8px 16px 0px hsla(206, 20%, 74%,  .2), 0px 2px 4px 0px hsla(206, 20%, 50%,  .1);
+@-shadow-md: 0px 15px 25px 0px hsla(200, 25%, 50%,  .15);
+@-shadow-xl: 0px 25px 60px 0px hsla(200, 20%, 50%, .2), 0px 6px 16px 0px hsla(200, 20%, 50%,  .12);
+
+
+.boxcard {
+
+    &-lg {
+        padding: @padding-lg;
+        border-radius: ceil((@padding-lg / 4));
+    }
+
+    &-md {
+        padding: @padding-md;
+        border-radius: ceil((@padding-lg / 4));
+    }
+
+    &-sm {
+        padding: @padding-sm;
+        border-radius: ceil((@padding-lg / 4));
+    }
+}
+
+.filled:extend(.boxcard all) {
+    background-color: @component-background;
+    box-shadow: @-shadow-s;
+
+    &:hover {
+        box-shadow: @-shadow-m;
+    }
+}
